@@ -8,15 +8,15 @@ bookmarks = {
 		default = yes
 			
 		"SLY"={
-			history = "USA_GATHERING_STORM_DESC"
+			history = "SLY_GATHERING_STORM_DESC"
 			ideology = neutrality
 		}
 	        "ZRC"={
-			history = "USA_GATHERING_STORM_DESC"
+			history = "ZRC_GATHERING_STORM_DESC"
 			ideology = fascism
 		}
                 "SOV"={
-			history = "USA_GATHERING_STORM_DESC"
+			history = "SOV_GATHERING_STORM_DESC"
 			ideology = neutrality
 		}
 			
