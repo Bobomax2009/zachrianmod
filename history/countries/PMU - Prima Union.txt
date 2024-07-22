@@ -83,7 +83,7 @@ create_country_leader = {
 	
 	name = "Zortokwa"
         desc = "The owner of the great Prima Union, Zortokwa has to keep this giant country alive with near absolute power."
-	picture = "gfx//leaders//Africa//Portrait_Africa_Generic_2.dds"
+	picture = "zort.dds"
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {

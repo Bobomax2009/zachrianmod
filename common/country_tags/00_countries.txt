@@ -1,5 +1,5 @@
 GER	= "countries/Germany.txt"
-ENG = "countries/United Kingdom.txt"
+ENG = "countries/Prima Union.txt"
 SOV = "countries/Soviet Union.txt"
 SWE	= "countries/Sweden.txt"
 FRA	= "countries/France.txt"
