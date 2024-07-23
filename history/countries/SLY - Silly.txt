@@ -86,15 +86,6 @@ if = {
 		basic_torpedo = 1
 	}
 }
-create_country_leader = {
-	name = "Pafi"
-	desc = "A former Prima Union member, forced into exile for committing several war crimes targetting Zort, now hiding north with his cult following to live a life of peace and anarchy"
-	picture = "portrait_pafcakes.dds"
-	ideology = anarchism
-	traits = {
-		#
-	}
-}
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1936.1.1"
@@ -109,8 +100,7 @@ set_popularities = {
 	neutrality = 50
 }
 
-recruit_character = ALT_grigory_gurkin
-recruit_character = ALT_samuil_yufit
+recruit_character = SLY_pafi
 
 
 

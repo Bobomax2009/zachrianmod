@@ -2,7 +2,7 @@
 
 
 #POLITICAL ADVISORS
-recruit_character = SOV_mikhail_kalinin
+recruit_character = SOV_zort
 
 capital = 219
 
@@ -228,16 +228,6 @@ set_popularities = {
 	neutrality = 1
 }
 
-create_country_leader = {
-	
-	name = "Zortokwa"
-        desc = "The owner of the great Prima Union, Zortokwa has to keep this giant country alive with near absolute power."
-	picture = "zort.dds"
-	expire = "1965.1.1"
-	ideology = marxism
-	traits = {
-		
-	}
 }
 
 

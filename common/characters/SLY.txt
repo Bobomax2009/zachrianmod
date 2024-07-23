@@ -1,0 +1,16 @@
+characters={
+	SLY_pafi={
+		name="pafi"
+		portraits={
+			civilian={
+				large="GFX_portrait_pafi_large"
+			}
+		}
+		country_leader={
+			ideology=anarchism
+			traits = { schizophrenic }
+			expire="1999.1.1.1"
+			id=-1
+		}
+	}
+}
