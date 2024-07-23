@@ -1,0 +1,16 @@
+characters={
+	SOV_zort={
+		name="Zortokwa"
+		portraits={
+			civilian={
+				large="GFX_portrait_zort_large"
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			traits = { iron_fist }
+			expire="1999.1.1.1"
+			id=-1
+		}
+	}
+}

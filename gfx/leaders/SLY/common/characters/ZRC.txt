@@ -1,0 +1,51 @@
+characters={
+	ZRC_dabiel={
+		name="Dabiel Roller"
+		portraits={
+			civilian={
+				large="GFX_portrait_dabiel_large"
+			}
+		}
+		country_leader={
+			ideology=rexism
+			traits = { absolutist }
+			expire="1999.1.1.1"
+			id=-1
+		}
+	}
+	ZRC_ellie={
+		name= "EllieStolfo"
+		portraits={
+			civilian={
+			  small="GFX_portrait_ellie_small"
+			}
+			civilian={
+			  large="GFX_portrait_ellie_large"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			traits = { vet_reformist }
+			expire="1999.1.1.1"
+			id=-1
+		}
+			
+		advisor={
+			slot = political_advisor
+			idea_token = elliestolfo
+			allowed  = {
+			tag = ZRC
+			}
+			cost = 150
+			available  = {
+			has_government = democratic
+				}
+			traits  = {
+				vet_reformist
+			}
+			ai_will_do  = {
+				factor  = 10.000
+			}
+        }
+    }
+}
