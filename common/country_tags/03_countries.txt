@@ -1,0 +1,3 @@
+ZRC = "countries/Zarchian State.txt"
+PMU = "countries/Prima Union.txt"
+SLY = "countries/Silly.txt"
