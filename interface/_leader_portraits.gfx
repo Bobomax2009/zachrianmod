@@ -18,20 +18,51 @@ spriteTypes = {
 		}
 		
 		
-	#SILLY
-	
+	#--------------------SILLY------------------
+	spriteType = {
+		name = "GFX_portrait_aussie_small"
+		texturefile = "gfx/leaders/SLY/portrait_aussia_small.dds"
+	}
 	spriteType = {
 		name = "GFX_portrait_pafi_large"
 		texturefile = "gfx/leaders/SLY/portrait_pafcakes.dds"
 	}
-    
-	#PRIMA
+	spriteType = {
+		name = "GFX_portrait_pafi_small"
+		texturefile = "gfx/leaders/SLY/portrait_pafcakes_small.dds"
+		}
+	spriteType = {
+		name = "GFX_portrait_daniel_large"
+		texturefile = "gfx/leaders/SLY/portrait_daniel.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_daniel_small"
+		texturefile = "gfx/leaders/SLY/portrait_daniel_small.dds"
+	}
+    spriteType = {
+		name = "GFX_portrait_rose_small"
+		texturefile = "gfx/leaders/SLY/portrait_rose_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_tax_small"
+		texturefile = "gfx/leaders/SLY/portrait_basiltax_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_azz_small"
+		texturefile = "gfx/leaders/SLY/portrait_ass_small.dds"
+	}
+	
+	#----------------PRIMA---------------
+	
+	
 	spriteType = {
 		name = "GFX_portrait_zort_large"
 		texturefile = "gfx/leaders/SOV/zort.dds"
 		}
 		
-	#ZARCHIAN
+		
+	#-------------ZARCHIAN---------------
+	
 	
 	spriteType = {
 		name = "GFX_portrait_dabiel_large"
@@ -47,16 +78,26 @@ spriteTypes = {
 		name = "GFX_portrait_ellie_small"
 		texturefile = "gfx/leaders/ZRC/portrait_ellie_small.dds"
 		}
-
-
-
-###TOA###
-
-
-	spriteType = {
-		name = "GFX_portrait_BRA_mascarenhas_de_morais_1"
-		texturefile = "gfx/leaders/BRA/portrait_BRA_mascarenhas_de_morais_1.dds"
-	}
+		
+    spriteType = {
+		name = "GFX_portrait_kaiser_small"
+		texturefile = "gfx/leaders/ZRC/portrait_kaiser_small.dds"
+		}
+		
+    spriteType = {
+		name = "GFX_portrait_dare_small"
+		texturefile = "gfx/leaders/ZRC/portrait_dare_small.dds"
+		}
+		
+		spriteType = {
+		name = "GFX_portrait_dare"
+		texturefile = "gfx/leaders/ZRC/portrait_dare.dds"
+		}
+		
+	 spriteType = {
+		name = "GFX_portrait_ai_small"
+		texturefile = "gfx/leaders/ZRC/portrait_ai_small.dds"
+		}
 
 
 }

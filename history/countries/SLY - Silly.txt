@@ -101,7 +101,12 @@ set_popularities = {
 }
 
 recruit_character = SLY_pafi
-
+recruit_character = SLY_aussie
+recruit_character = SLY_daniel
+recruit_character = SLY_tax
+recruit_character = SLY_ellie
+recruit_character = SLY_adrian
+recruit_character = SLY_mcyt
 
 
 

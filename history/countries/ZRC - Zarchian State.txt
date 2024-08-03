@@ -7,8 +7,14 @@ set_technology = {
 
 recruit_character = ZRC_dabiel
 recruit_character = ZRC_ellie
+recruit_character = ZRC_kaiser
+recruit_character = ZRC_ai
+recruit_character = ZRC_dare
 
-
+add_ideas = {
+understaffed_state
+absolute_power
+}
 
 set_convoys = 20
 

@@ -4,6 +4,7 @@ characters={
 		portraits={
 			civilian={
 				large="GFX_portrait_pafi_large"
+				small="GFX_portrait_pafi_small"
 			}
 		}
 		country_leader={
@@ -12,5 +13,183 @@ characters={
 			expire="1999.1.1.1"
 			id=-1
 		}
+		advisor={
+			slot = political_advisor
+			idea_token = pafcakes
+			allowed  = {
+			tag = SLY
+			}
+			cost = 5
+			available  = {
+			is_country_leader = false
+				}
+			traits  = {
+				schizophrenic
+			}
+			ai_will_do  = {
+				factor  = 10.000
+			}
+        }
+	}
+	SLY_daniel={
+		name="DanielB"
+		portraits={
+			civilian={
+				large="GFX_portrait_ellie_large"
+				small="GFX_portrait_daniel_small"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			traits = { sleep_femboy }
+			expire="1999.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = daniel
+			allowed  = {
+			tag = SLY
+			}
+			cost = 150
+			available  = {
+			is_country_leader = false
+				}
+			traits  = {
+				sleep_femboy
+			}
+			ai_will_do  = {
+				factor  = 10.000
+			}
+        }
+	}
+	SLY_tax={
+		name="Tax Entity"
+		portraits={
+			civilian={
+				small="GFX_portrait_tax_small"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = tax
+			allowed  = {
+			tag = SLY
+			}
+			cost = 150
+			available  = {
+			is_country_leader = false
+				}
+			traits  = {
+				taxman
+			}
+			ai_will_do  = {
+				factor  = 10.000
+			}
+        }
+	}
+	SLY_ellie={
+		name="EllieStolfo"
+		portraits={
+			civilian={
+				small="GFX_portrait_ellie_small"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ellie
+			allowed  = {
+			tag = SLY
+			}
+			cost = 200
+			available  = {
+			is_country_leader = false
+				}
+			traits  = {
+				silly_president
+			}
+			ai_will_do  = {
+				factor  = 10.000
+			}
+        }
+	}
+	SLY_aussie={
+		name="AussieStolfo"
+		portraits={
+			civilian={
+				small="GFX_portrait_aussie_small"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = aussie
+			allowed  = {
+			tag = SLY
+			}
+			cost = 150
+			available  = {
+			is_country_leader = false
+				}
+			traits  = {
+				aussie
+			}
+			ai_will_do  = {
+				factor  = 10.000
+			}
+        }
+	}
+	SLY_adrian={
+		name="Adrian Vyspianski"
+		portraits={
+			civilian={
+				small="GFX_portrait_ellie_small"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = adrian
+			allowed  = {
+			tag = SLY
+			}
+			cost = 50
+			available  = {
+			is_country_leader = false
+				}
+			traits  = {
+				popular_pole
+			}
+			ai_will_do  = {
+				factor  = 10.000
+			}
+        }
+	}
+	SLY_mcyt={
+		name="Average Rose"
+		portraits={
+			civilian={
+				small="GFX_portrait_rose_small"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = mcyt
+			allowed  = {
+			tag = SLY
+			}
+			cost = 50
+			available  = {
+			 has_country_leader = {
+	          character = SLY_daniel
+	          ruling_only = yes
+			}
+			has_government = democratic
+				}
+			traits  = {
+				first_lady
+			}
+			ai_will_do  = {
+				factor  = 10.000
+			}
+        }
 	}
 }

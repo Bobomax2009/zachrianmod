@@ -38,10 +38,93 @@ characters={
 			}
 			cost = 150
 			available  = {
+			is_country_leader = false
 			has_government = democratic
 				}
 			traits  = {
 				vet_reformist
+			}
+			ai_will_do  = {
+				factor  = 10.000
+			}
+        }
+    }
+		ZRC_kaiser={
+		name= "kaiserbismarck"
+		portraits={
+			civilian={
+			  small="GFX_portrait_kaiser_small"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = kaiserbismarck
+			allowed  = {
+			tag = ZRC
+			}
+			cost = 150
+			available  = {
+				}
+			traits  = {
+				king_baltic
+			}
+			ai_will_do  = {
+				factor  = 10.000
+			}
+        }
+    }
+	
+ZRC_ai={
+		name= "ItsAi"
+		portraits={
+			civilian={
+			  small="GFX_portrait_ai_small"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = itsai
+			allowed  = {
+			tag = ZRC
+			}
+			cost = 100
+			available  = {
+				}
+			traits  = {
+				anti_farmer
+			}
+			ai_will_do  = {
+				factor  = 10.000
+			}
+        }
+    }
+	ZRC_dare={
+		name= "DARE"
+		portraits={
+			civilian={
+			  small="GFX_portrait_dare_small"
+                          large="GFX_portrait_dare"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			traits = { revolutionary_reformist }
+			expire="1999.1.1.1"
+			id=-1
+		}
+			
+		advisor={
+			slot = political_advisor
+			idea_token = dare
+			allowed  = {
+			tag = ZRC
+			}
+			cost = 150
+			available  = {
+			 is_country_leader = false
+				}
+			traits  = {
+				revolutionary_reformist
 			}
 			ai_will_do  = {
 				factor  = 10.000

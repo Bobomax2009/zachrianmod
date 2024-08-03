@@ -14,9 +14,102 @@
 
 leader_traits = {
 
+    sleep_femboy = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.1
+		stability_factor = 0.2
+		 industrial_capacity_factory = -0.15
+		factory
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	silly_president = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.3
+		factory
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	
+	
+	taxman = {
+		random = no
+		sprite = 10
+		 industrial_capacity_factory = -0.15
+		 consumer_goods_factor = -0.4
+		factory
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+   aussie = {
+		random = no
+		sprite = 9
+		special_forces_cap_flat = +10
+		special_forces_attack_factor = +0.1
+		special_forces_defence_factor = +0.25
+		special_forces_out_of_supply_factor = -0.15
+		army_experience_gain=@chief_experience_gain_high
+		command_cap = @tier2
+		factory
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+   king_baltic = {
+		random = no
+		sprite = 3
+		navy_capital_ship_attack_factor = 0.25
+		navy_capital_ship_defence_factor = 0.05
+		experience_gain_navy = @chief_experience_gain_high
+
+		command_cap = @tier3
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				command_power < @tier3
+			}
+		}
+	}
+
+    revolutionary_reformist = {
+		random = no
+		sprite = 14
+		war_support_factor = 0.15
+		weekly_manpower = 2000
+		mobilization_speed = 0.2
+		stability_factor = -0.15
+		communism_drift = 0.3
+		ai_will_do = {
+			factor = 1
+		}
+	} 	
+	
+	anti_farmer = {
+		random = no
+		sprite = 12
+		research_speed_factor = 0.1
+		stability_factor = -0.05
+		communism_drift = -0.2
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 
     vet_reformist = {
 		random = no
+		sprite = 13
 		political_power_factor = 0.15
 		stability_factor = 0.05
 		democratic_drift = 0.15
@@ -24,9 +117,31 @@ leader_traits = {
 			factor = 1
 		}
 	} 
-
-    schizophrenic = {
+	iron_fist = {
 		random = no
+		political_power_factor = 0.15
+		industrial_capacity_factory = -0.1
+		sprite = 15
+		ai_will_do = {
+			factor = 1
+		}
+	} 
+	 absolutist = {
+		random = no
+		political_power_factor = 0.10
+		stability_factor = -0.15
+		political_advisor_cost_factor = -0.15
+		trade_laws_cost_factor = -0.15
+		mobilization_laws_cost_factor = -0.15
+		economy_cost_factor = -0.15
+		sprite = 13
+		ai_will_do = {
+			factor = 1
+		}
+	} 
+	 schizophrenic = {
+		random = no
+		sprite = 2
         ai_desired_divisions_factor = 1
 	    stability_weekly = -0.02
 		political_power_factor = -0.25
@@ -40,23 +155,24 @@ leader_traits = {
 			factor = 1
 		}
 	} 
-	    absolutist = {
-		random = no
-		political_power_factor = 0.2
-		stability_factor = -0.10
-		ai_will_do = {
-			factor = 1
-		}
-	} 
 	
-	iron_fist = {
+	popular_pole = {
+	    sprite = 12
 		random = no
-		political_power_factor = 0.15
-		industrial_capacity_factory = -0.1
+		stability_factor = 0.2
+		
+
 		ai_will_do = {
 			factor = 1
 		}
-	} 
+	}
+	
+	first_lady = {
+		random = no
+		stability_factor = 0.1
+		political_power_gain = 0.5
+		sprite = 12
+	}
 	
 	dictator = {
 		random = no

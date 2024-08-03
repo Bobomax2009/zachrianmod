@@ -1,0 +1,87 @@
+﻿focus_tree = {
+	id = zarchian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ZRC
+		}
+    }
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1000 }
+
+	focus = {
+		id = ZRC_soften_grip_on_power
+		icon = GFX_goal_generic_dangerous_deal
+		x = 3
+		y = 5
+		#relative_position_id = AST_empower_the_workers
+		
+		available = {
+		}
+		bypass = {
+		}
+		mutually_exclusive = { focus = ZRC_radicalise_the_masses }
+		cost = 5
+		prerequisite = { 
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_political_power = 100
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+	}
+	
+    focus = {
+		id = ZRC_radicalise_the_masses
+		icon = GFX_focus_CHL_union_of_hispanic_republics
+		x = 10
+		y = 0
+		relative_position_id = ZRC_soften_grip_on_power
+		
+		
+		available = { 
+		}
+		bypass = {
+		}
+		mutually_exclusive = { focus = ZRC_soften_grip_on_power }
+		cost = 10
+		prerequisite = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		add_popularity = {
+	    ideology = democratic
+        popularity = -0.2
+        }
+		add_popularity = {
+        ideology = communism
+        popularity = 0.2
+		}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+			}
+		}
+	}
+
+
+
+}		
