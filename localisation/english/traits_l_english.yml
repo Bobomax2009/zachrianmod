@@ -1590,7 +1590,7 @@
  
  #MODDED TRAITS
  
- schizophrenic:0 "Schizophrenic Anarchist"
+ schizophrenic:0 "Schizophrenia"
  iron_fist:0 "Iron Fist"
  absolutist:0 "Overconfident Decision Maker"
  vet_reformist:0 "Veteran Reformer"
@@ -1603,3 +1603,7 @@
  aussie:0 "Australian Ranger"
  popular_pole:0 "Likeable Figurehead"
  first_lady:0 "First Lady"
+ schizophrenic_2: "Worsening Schizophrenia"
+ schizophrenic_3: "Severe Schizophrenia"
+ schizophrenic_4: "Uttermost Acute Schizophrenia and Dementia"
+ schizophrenic_5: "Symptoms of countless fatal mental disorders and late stage Dementia"

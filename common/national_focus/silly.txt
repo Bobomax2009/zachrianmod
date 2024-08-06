@@ -1,4 +1,6 @@
 ﻿
+set_variable = { shizo = 1 }
+
 focus_tree = {
 	id = silly_tree
 	
@@ -15,12 +17,26 @@ focus_tree = {
 
 	continuous_focus_position = { x = 30 y = 1500}
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	focus = {
 		id = SLY_settle_south
 		icon = GFX_focus_rom_preserve_romania
-		x = 9
+		x = 10
 		y = 0		
-		cost = 5	
+		cost = 2.5
 		
 		prerequisite = {}
 		mutually_exclusive = {}
@@ -39,23 +55,19 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			SLY = {add_state_core = 766}
-			766 ={ add_building_construction = {
-             type = arms_factory
-			 level = 2
-			 instant_build = yes
-			 }
-			 add_extra_state_shared_building_slots = 2
             }
-		}
-	}
+     }
+	 
+	 
 	focus = {
 		id = SLY_assert_claims
 		icon = GFX_focus_generic_attack_romania
 		x = 0
-		y = 1
+		y = 3
 		cost = 10		
 		
 		prerequisite = {focus =SLY_settle_south}
+		prerequisite = {focus =SLY_personality_cult}
 		mutually_exclusive = {}
 		relative_position_id = SLY_settle_south
 		available = {
@@ -80,9 +92,511 @@ focus_tree = {
 	         type = take_state_focus
 			 target = ROM
              generator = { 123 321 }
-             expire = 180
-}
-	}
+            
+			}
+	    }
+	} 
+	
+	#----------------ECONOMY------------------------
+	
+	
+	focus = {
+		id = SLY_anarchist_economy
+		icon = GFX_focus_NORDIC_com_capstone_civilian
+		x = 3
+		y = 0
+		cost = 10	
+		
+		prerequisite = {}
+		mutually_exclusive = {}
+		available = {
+		}
+		bypass = {	
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
 
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+				ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			78 ={ add_building_construction = {
+             type = industrial_complex
+			 level = 4
+			 instant_build = yes
+			 }
+			 add_extra_state_shared_building_slots = 4
+			 }
+			766 ={ add_building_construction = {
+             type = industrial_complex
+			 level = 2
+			 instant_build = yes
+			 }
+			 add_extra_state_shared_building_slots = 2
+	         }
+            }
+     }
+	 
+	 focus = {
+		id = SLY_living_space
+		icon = GFX_focus_CHL_la_corporacion_araucania
+		relative_position_id = SLY_anarchist_economy
+		x = 1
+		y = 1
+		cost = 5	
+		
+		prerequisite = {focus= SLY_anarchist_economy}
+		mutually_exclusive = {}
+		available = {
+		}
+		bypass = {	
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
 
-}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+				ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			78 ={  add_building_construction = {
+             type = infrastructure
+			 level = -1
+			 instant_build = yes
+			 }
+			 add_extra_state_shared_building_slots = 6
+			 }
+			
+			if = {
+			schizo = 1
+			swap_ruler_traits = { remove = schizophrenic add = schizophrenic_2 }
+			add_to_variable = { shizo = 1 }}
+			 
+			 else_if= {
+			 schizo = 2
+			 swap_ruler_traits = { remove = schizophrenic_2 add = schizophrenic_3 }
+			 add_to_variable = { shizo = 1 }}
+			
+			
+			
+			#if = {
+			 #has_country_leader_with_trait = schizophrenic
+             #swap_ruler_traits = { remove = schizophrenic add = schizophrenic_2 }}
+			 
+			 #else_if = {
+			 #has_country_leader_with_trait = schizophrenic_2
+             #swap_ruler_traits = { remove = schizophrenic_2 add = schizophrenic_3 }}
+			 
+			 #else_if = {
+			 #has_country_leader_with_trait = schizophrenic_3
+             #swap_ruler_traits = { remove = schizophrenic_3 add = schizophrenic_4 }}
+			 
+			 #else_if = {
+			 #has_country_leader_with_trait = schizophrenic_4
+             #swap_ruler_traits = { remove = schizophrenic_4 add = schizophrenic_5 }}
+               
+            }
+     }
+	 
+	  focus = {
+		id = SLY_seize_businesses
+		icon = GFX_focus_DEN_heavy_regulations
+		relative_position_id = SLY_anarchist_economy
+		x = 5
+		y = 1
+		cost = 5	
+		
+		prerequisite = {focus= SLY_anarchist_economy}
+		prerequisite = {focus= SLY_settle_south}
+		mutually_exclusive = {}
+		available = {
+		}
+		bypass = {	
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			766 ={ add_building_construction = {
+             type = arms_factory
+			 level = 2
+			 instant_build = yes
+			 }
+			 add_building_construction = {
+             type = industrial_complex
+			 level = 2
+			 instant_build = yes
+			 }
+			 add_extra_state_shared_building_slots = 4
+	         }
+	         }
+            }
+     
+	 
+	 focus = {
+		id = SLY_pafinomics
+		icon = GFX_focus_ARG_women_in_industry
+		relative_position_id = SLY_seize_businesses
+		x = -2
+		y = 1
+		cost = 10	
+		
+		prerequisite = {focus= SLY_seize_businesses}
+		prerequisite = {focus= SLY_living_space}
+		mutually_exclusive = {}
+		available = {
+		}
+		bypass = {	
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			 add_timed_idea = {
+             idea = pafinomics
+              days = 1095 
+               }
+	         }
+            }
+			
+			focus = {
+		id = SLY_gambling
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		relative_position_id = SLY_pafinomics
+		x = 0
+		y = 1
+		cost = 5
+		
+		prerequisite = {focus= SLY_pafinomics}
+		mutually_exclusive = {}
+		available = {
+		}
+		bypass = {	
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		    78 ={ add_building_construction = {
+             type = industrial_complex
+			 level = 2
+			 instant_build = yes
+			 }
+			 add_extra_state_shared_building_slots = 2
+			 }
+			 add_political_power = 150
+			
+	         }
+            }
+			
+		focus = {
+		id = SLY_statues
+		icon = GFX_focus_smiling_buddha
+		relative_position_id = SLY_gambling
+		x = 0
+		y = 1
+		cost = 5
+		
+		prerequisite = {focus= SLY_gambling}
+		mutually_exclusive = {}
+		available = {
+		}
+		bypass = {	
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+			
+	         }
+            }
+			
+			
+	#---------------------------MILITARY-----------------------
+	
+	
+			
+	focus = {
+		id = SLY_elite
+		icon = GFX_focus_NORDIC_com_selector_army
+		x = 1
+		y = 1		
+		cost = 5
+		relative_position_id = SLY_settle_south
+		prerequisite = {focus = SLY_settle_south}
+		mutually_exclusive = {}
+		available = {
+		}
+		bypass = {	
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+				ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		division_template = {
+				name = "Silly Elite"
+				priority = 2
+				#template_counter = 0
+				division_names_group = POL_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+		
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+		
+					infantry = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1 }
+					artillery_brigade = { x = 2 y = 2 }
+				}
+				support {
+					engineer = { x = 0 y = 0 }
+					}
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 78 }
+				create_unit = {
+					division = "name = \"First Silly Elite Division\" division_template = \"Silly Elite\" start_experience_factor = 1.0" 
+					owner = SLY
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 78 }
+				create_unit = {
+					division = "name = \"Second Silly Infantry Elite Division\" division_template = \"Silly Elite\" start_experience_factor = 1.0" 
+					owner = SLY
+				}}
+		    random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 78 }
+				create_unit = {
+					division = "name = \"Third Silly Elite Division\" division_template = \"Silly Elite\" start_experience_factor = 1.0" 
+					owner = SLY
+				}}
+		    random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 78 }
+				create_unit = {
+					division = "name = \"Fourth Silly Elite Division\" division_template = \"Silly Elite\" start_experience_factor = 1.0" 
+					owner = SLY
+				}}
+			}
+		}
+		focus = {
+		id = SLY_personality_cult
+		icon = GFX_focus_POL_consolidate_sanation_government
+		relative_position_id = SLY_elite
+		x = 0
+		y = 1
+		cost = 5
+		
+		prerequisite = {focus= SLY_elite}
+		mutually_exclusive = {}
+		available = {
+		}
+		bypass = {	
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+            }
+			}
+		
+		
+		focus = {
+		id = SLY_silly_academy
+		icon = GFX_goal_div_math
+		relative_position_id = SLY_elite
+		x = 3
+		y = 1
+		cost = 5
+		
+		prerequisite = {focus= SLY_elite}
+		mutually_exclusive = {}
+		available = {
+		}
+		bypass = {	
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+            }
+			}
+			
+	focus = {
+		id = SLY_invest_army
+		icon = GFX_focus_NORDIC_dem_army
+		relative_position_id = SLY_silly_academy
+		x = 1
+		y = 1
+		cost = 5
+		
+		prerequisite = {focus= SLY_silly_academy}
+		mutually_exclusive = {}
+		available = {
+		}
+		bypass = {	
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+            }
+			}
+			
+    focus = {
+		id = SLY_invest_air
+		icon = GFX_focus_NORDIC_dem_airforce
+		relative_position_id = SLY_silly_academy
+		x = -1
+		y = 1
+		cost = 5
+		
+		prerequisite = {focus= SLY_silly_academy}
+		mutually_exclusive = {}
+		available = {
+		}
+		bypass = {	
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+            }
+			}
+		
+	focus = {
+		id = SLY_invest_army_2
+		icon = GFX_focus_NORDIC_com_army
+		relative_position_id = SLY_invest_army
+		x = 0
+		y = 1
+		cost = 5
+		
+		prerequisite = {focus= SLY_invest_army}
+		mutually_exclusive = {}
+		available = {
+		}
+		bypass = {	
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+            }
+			}
+	focus = {
+		id = SLY_invest_air_2
+		icon = GFX_focus_NORDIC_com_airforce
+		relative_position_id = SLY_invest_air
+		x = 0
+		y = 1
+		cost = 5
+		
+		prerequisite = {focus= SLY_invest_air}
+		mutually_exclusive = {}
+		available = {
+		}
+		bypass = {	
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+            }
+			}
+	
+	focus = {
+		id = SLY_land_supremacy
+		icon = GFX_focus_NORDIC_mon_army
+		relative_position_id = SLY_invest_army_2
+		x = 0
+		y = 1
+		cost = 10
+		mutually_exclusive = {focus = SLY_air_supremacy}
+		prerequisite = {focus= SLY_invest_army_2}
+		available = {
+		}
+		bypass = {	
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+            }
+			}
+	
+	
+	
+	focus = {
+		id = SLY_air_supremacy
+		icon = GFX_focus_NORDIC_mon_airforce
+		relative_position_id = SLY_invest_air_2
+		x = 0
+		y = 1
+		cost = 10
+		
+		prerequisite = {focus= SLY_invest_air_2}
+		mutually_exclusive = {focus = SLY_land_supremacy}
+		available = {
+		}
+		bypass = {	
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+            }
+			}
+			
+	
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			}
+			
+			
+

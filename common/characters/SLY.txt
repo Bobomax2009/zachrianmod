@@ -142,7 +142,7 @@ characters={
 		name="Adrian Vyspianski"
 		portraits={
 			civilian={
-				small="GFX_portrait_ellie_small"
+				small="GFX_portrait_adrian_small"
 			}
 		}
 		advisor={

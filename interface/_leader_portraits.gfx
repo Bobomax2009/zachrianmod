@@ -21,7 +21,11 @@ spriteTypes = {
 	#--------------------SILLY------------------
 	spriteType = {
 		name = "GFX_portrait_aussie_small"
-		texturefile = "gfx/leaders/SLY/portrait_aussia_small.dds"
+		texturefile = "gfx/leaders/SLY/portrait_aussie_small.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_adrian_small"
+		texturefile = "gfx/leaders/SLY/portrait_adrian_small.dds"
 	}
 	spriteType = {
 		name = "GFX_portrait_pafi_large"

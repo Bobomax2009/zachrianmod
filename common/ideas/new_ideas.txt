@@ -98,4 +98,30 @@ ideas = {
 				stability_factor = 0.15
 			}
 		}
+		country = {
+		pafinomics = {
+			picture = generic_pp_unity_bonus
+			
+			allowed = {
+				tag = SLY
+			}
+            available = {
+			}
+			cancel = {
+			}
+		
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.2
+				industrial_capacity_factory = 1
+			}
+		}
+}
 }
